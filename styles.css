@@ -1,0 +1,47 @@
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    text-align: center;
+    flex: 1;
+    background-color: rgb(233, 233, 233);
+    height: 600px;
+}
+
+header{
+    background-color: rgb(50, 134, 160);
+    font-size: 50px;
+    font-weight: bold;
+    font-style: italic;    
+    padding: 20px;
+}
+
+footer{
+    background-color: black;
+    color: rgb(233, 233, 233);
+    padding: 10px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.command {
+    background-color: rgb(150, 150, 150);
+    min-height: 25px;
+    color: black;
+    padding: 20px;
+}
+
+.gridBase{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    background-color: burlywood;
+    padding: 20px;
+}
+
+.inside {
+    background-color: brown;
+    flex: 0,0,0;
+}
