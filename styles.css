@@ -5,7 +5,8 @@ body{
     text-align: center;
     flex: 1;
     background-color: rgb(233, 233, 233);
-    height: 600px;
+    height: 100vh;
+    font-family: "Sour Gummy", sans-serif;
 }
 
 header{
@@ -16,12 +17,19 @@ header{
     padding: 20px;
 }
 
+.space{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 footer{
     background-color: black;
     color: rgb(233, 233, 233);
     padding: 10px;
     font-weight: bold;
     font-style: italic;
+    margin-top: auto;
 }
 
 .command {
@@ -35,13 +43,13 @@ footer{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    align-content: center;
-    justify-content: center;
     background-color: burlywood;
     padding: 20px;
+    align-self: center;
+    justify-content: center;
+    margin-top: auto;
 }
 
 .inside {
     background-color: brown;
-    flex: 0,0,0;
 }
