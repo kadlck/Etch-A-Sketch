@@ -37,19 +37,29 @@ footer{
     min-height: 25px;
     color: black;
     padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
 }
 
 .gridBase{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    background-color: burlywood;
     padding: 20px;
     align-self: center;
     justify-content: center;
     margin-top: auto;
 }
 
-.inside {
+.button{
+    height: 40px;
+    width: 70px;
+    text-align: center;
+    font-weight: bold;
+}
+.create {
     background-color: brown;
 }
