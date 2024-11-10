@@ -60,6 +60,15 @@ footer{
     text-align: center;
     font-weight: bold;
 }
-.create {
-    background-color: brown;
+
+.height, .width {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: auto;
+}
+
+.button.space {
+    display: flex;
+    gap: 10px;
 }

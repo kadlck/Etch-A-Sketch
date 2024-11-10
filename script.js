@@ -44,9 +44,7 @@ function changecolor(event){
         const blockIwant = document.getElementsByClassName(blockClass)[0];
         blockIwant.style.backgroundColor = color; 
     }
-    
 }
-
 
 let height = 16
 let width = 16
@@ -86,13 +84,57 @@ function setUpButtons(){
             ShadeButton.textContent = "Shading: "+shading
         }
     })
-    const SpaceButton = document.createElement("button");
-    SpaceButton.classList.add("button", "space");
+    const heightButton = document.createElement("div");
+    heightButton.classList.add("button", "space", "height");
+    const upButton = document.createElement("button")
+    upButton.classList.add("button", "space", "rolling");
+    upButton.textContent = "HEIGHT UP"
+    upButton.addEventListener("click", function addheight(){
+        height += 1
+        const gridBase = document.querySelector(".gridBase");
+        gridBase.replaceChildren()
+        createGrid(height, width)
+    })
+    const downButton = document.createElement("button")
+    downButton.classList.add("button", "space", "rolling");
+    downButton.textContent = "HEIGHT DOWN"
+    downButton.addEventListener("click", function removeheight(){
+        height -= 1
+        const gridBase = document.querySelector(".gridBase");
+        gridBase.replaceChildren()
+        createGrid(height, width)
+    })
+    heightButton.append(upButton)
+    heightButton.append(downButton)
+
+    const widthButton = document.createElement("div");
+    widthButton.classList.add("button", "space", "width");
+    const WupButton = document.createElement("button")
+    WupButton.classList.add("button", "space", "rolling");
+    WupButton.textContent = "WIDTH UP"
+    WupButton.addEventListener("click", function addheight(){
+        width += 1
+        const gridBase = document.querySelector(".gridBase");
+        gridBase.replaceChildren()
+        createGrid(height, width)
+    })
+    const WdownButton = document.createElement("button")
+    WdownButton.classList.add("button", "space", "rolling");
+    WdownButton.textContent = "WIDTH DOWN"
+    WdownButton.addEventListener("click", function removeheight(){
+        width -= 1
+        const gridBase = document.querySelector(".gridBase");
+        gridBase.replaceChildren()
+        createGrid(height, width)
+    })
+    widthButton.append(WupButton)
+    widthButton.append(WdownButton)
 
     command.appendChild(CreateButton);
     command.appendChild(ColorButton);
     command.appendChild(ShadeButton);
-    command.appendChild(SpaceButton);
+    command.appendChild(heightButton);
+    command.appendChild(widthButton)
 }
 
 createGrid(height,width)
